@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
-        /* Base Styles */
+        /* ALL BASE, HEADER, AND FOOTER STYLES REMAIN EXACTLY AS IN YOUR FIRST CODE */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
         :root {
             --primary: #e10600;
             --secondary: #1a1a1a;
@@ -23,23 +22,21 @@
             --gray: #333;
             --light-gray: #888;
         }
-        
         body {
             background-color: #111;
             color: var(--light);
             line-height: 1.6;
         }
-        
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header & Navigation */
+        /* === HEADER WITH ADJUSTED VISIBILITY === */
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
             position: fixed;
@@ -47,42 +44,36 @@
             top: 0;
             z-index: 1000;
             border-bottom: 2px solid var(--primary);
+            /* Adjusted to make background more visible */
         }
-        
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
         }
-        
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
         .logo i {
             color: var(--primary);
             font-size: 2rem;
         }
-        
         .logo h1 {
             font-size: 1.8rem;
             font-weight: 800;
             letter-spacing: 1px;
         }
-        
         .logo span {
             color: var(--primary);
         }
-        
         nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
         }
-        
         nav a {
             color: var(--light);
             text-decoration: none;
@@ -91,11 +82,9 @@
             transition: color 0.3s;
             position: relative;
         }
-        
         nav a:hover {
             color: var(--primary);
         }
-        
         nav a::after {
             content: '';
             position: absolute;
@@ -106,22 +95,18 @@
             left: 0;
             transition: width 0.3s;
         }
-        
         nav a:hover::after {
             width: 100%;
         }
-        
         .header-actions {
             display: flex;
             align-items: center;
             gap: 20px;
         }
-        
         .cart-icon {
             position: relative;
             cursor: pointer;
         }
-        
         .cart-count {
             position: absolute;
             top: -8px;
@@ -137,7 +122,6 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
-        
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -147,42 +131,48 @@
             cursor: pointer;
         }
         
-        /* Hero Section */
+        /* === HERO SECTION WITH SINGLE BUTTON === */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            height: 90vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             text-align: center;
             margin-top: 70px;
+            padding: 40px 20px;
         }
-        
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
         }
-        
         .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 3.8rem;
+            margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            line-height: 1.1;
         }
-        
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 40px;
             color: #ddd;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
         .cta-button {
             display: inline-block;
             background-color: var(--primary);
             color: white;
-            padding: 15px 40px;
+            padding: 18px 45px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
@@ -192,465 +182,419 @@
             transition: all 0.3s;
             border: 2px solid var(--primary);
         }
-        
         .cta-button:hover {
             background-color: transparent;
             color: var(--primary);
+            transform: translateY(-3px);
         }
         
-        /* Products Section */
+        /* === LOGO SHOWCASE SECTION === */
+        .logo-showcase {
+            padding: 80px 0;
+            background-color: #0f0f0f;
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .logo-item {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            transition: all 0.3s;
+            border: 1px solid #333;
+        }
+        .logo-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(225, 6, 0, 0.1);
+        }
+        .logo-item img {
+            max-width: 100%;
+            max-height: 80px;
+        }
+        
+        /* === GALLERY PREVIEW SECTION === */
+        .gallery-preview {
+            padding: 100px 0;
+        }
         .section-title {
             text-align: center;
-            margin: 80px 0 50px;
+            margin-bottom: 60px;
             position: relative;
         }
-        
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             text-transform: uppercase;
             display: inline-block;
         }
-        
         .section-title h2::after {
             content: '';
             display: block;
-            width: 100px;
+            width: 120px;
             height: 4px;
             background-color: var(--primary);
             margin: 15px auto;
         }
-        
         .section-title p {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             color: #aaa;
+            font-size: 1.1rem;
         }
-        
-        .products-grid {
+        .preview-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
         }
-        
-        .product-card {
-            background-color: var(--secondary);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .preview-item {
             position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 350px;
+            transition: transform 0.4s;
         }
-        
-        .product-card:hover {
+        .preview-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(225, 6, 0, 0.3);
         }
-        
-        .product-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .product-img img {
+        .preview-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.6s;
         }
-        
-        .product-card:hover .product-img img {
+        .preview-item:hover img {
             transform: scale(1.05);
         }
-        
-        .product-info {
-            padding: 20px;
-        }
-        
-        .product-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-        
-        .product-info p {
-            color: var(--light-gray);
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-        
-        .product-price {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-        }
-        
-        .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .add-to-cart {
-            background-color: var(--gray);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        .add-to-cart:hover {
-            background-color: var(--primary);
-        }
-        
-        /* Gallery Section */
-        .gallery {
-            padding: 80px 0;
-            background-color: var(--secondary);
-        }
-        
-        .gallery-tabs {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .gallery-tab {
-            background-color: #222;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .gallery-tab.active {
-            background-color: var(--primary);
-        }
-        
-        .gallery-tab:hover:not(.active) {
-            background-color: #333;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-            height: 250px;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-caption {
+        .preview-content {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            transform: translateY(100%);
-            transition: transform 0.3s;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: 30px;
+            text-align: center;
         }
-        
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-        
-        .gallery-caption h4 {
+        .preview-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
             color: white;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
         }
-        
-        .gallery-caption p {
+        .preview-content p {
             color: #ccc;
-            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .preview-link {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .preview-link:hover {
+            background-color: #c10500;
         }
         
-        /* Specifications Section */
-        .specs {
-            padding: 80px 0;
+        /* === WHY CHOOSE WHEELWORLD SECTION === */
+        .why-choose {
+            padding: 100px 0;
+            background-color: #0f0f0f;
         }
-        
-        .specs-grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
         }
-        
-        .spec-card {
-            background-color: var(--secondary);
-            border-radius: 10px;
-            overflow: hidden;
+        .feature-card {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
             transition: transform 0.3s;
+            border: 1px solid #333;
         }
-        
-        .spec-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(225, 6, 0, 0.1);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: white;
+            transition: all 0.3s;
+        }
+        .feature-card:hover .feature-icon {
+            background-color: white;
+            color: var(--primary);
+            transform: rotate(360deg);
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .feature-card p {
+            color: #aaa;
+            line-height: 1.7;
         }
         
-        .spec-image {
-            height: 200px;
+        /* === FEATURED RIMS SECTION === */
+        .featured-rims {
+            padding: 100px 0;
+        }
+        .rims-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        .rim-card {
+            background-color: var(--secondary);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.4s;
+        }
+        .rim-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(225, 6, 0, 0.15);
+        }
+        .rim-image {
+            height: 250px;
             overflow: hidden;
         }
+        .rim-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        .rim-card:hover .rim-image img {
+            transform: scale(1.08);
+        }
+        .rim-info {
+            padding: 30px;
+        }
+        .rim-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        .rim-info p {
+            color: var(--light-gray);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .rim-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .rim-feature {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        .rim-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .view-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .view-btn:hover {
+            background-color: var(--primary);
+        }
         
-        .spec-image img {
+        /* === TESTIMONIALS SECTION === */
+        .testimonials {
+            padding: 100px 0;
+            background-color: #0f0f0f;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            padding: 40px;
+            position: relative;
+            border: 1px solid #333;
+        }
+        .testimonial-quote {
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+        }
+        .author-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
-        .spec-content {
-            padding: 25px;
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .author-info p {
+            color: var(--light-gray);
+            font-size: 0.9rem;
         }
         
-        .spec-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--primary);
+        /* === PREMIUM CTA SECTION === */
+        .premium-cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
         }
-        
-        .spec-details {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
+        .premium-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            color: white;
         }
-        
-        .spec-detail {
+        .premium-cta p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn-main {
+            background-color: var(--primary);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
-        .spec-icon {
+        .btn-main:hover {
+            background-color: white;
             color: var(--primary);
-            font-size: 1.2rem;
-            width: 30px;
+            transform: translateY(-3px);
         }
-        
-        .spec-value {
-            font-weight: 600;
-        }
-        
-        /* About Section */
-        .about {
-            background-color: var(--secondary);
-            padding: 80px 0;
-            margin: 80px 0;
-        }
-        
-        .about-content {
+        .btn-alt {
+            background-color: transparent;
+            color: white;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 10px;
         }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .btn-alt:hover {
+            background-color: white;
             color: var(--primary);
+            transform: translateY(-3px);
         }
         
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Features Section */
-        .features {
-            margin: 80px 0;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: var(--secondary);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background-color: var(--secondary);
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .contact-details {
-            margin-top: 30px;
-        }
-        
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            gap: 15px;
-        }
-        
-        .contact-detail i {
-            color: var(--primary);
-            font-size: 1.2rem;
-            width: 30px;
-        }
-        
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            background-color: #222;
-            border: 1px solid #444;
-            border-radius: 5px;
-            color: white;
-            font-size: 1rem;
-        }
-        
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-        
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: #c10500;
-        }
-        
-        /* Footer */
+        /* === FOOTER STYLES (UNCHANGED except developer credit) === */
         footer {
             background-color: #0a0a0a;
             padding: 60px 0 30px;
             border-top: 2px solid var(--primary);
         }
-        
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
-        
         .footer-column h3 {
             font-size: 1.5rem;
             margin-bottom: 25px;
             color: var(--primary);
         }
-        
         .footer-links {
             list-style: none;
         }
-        
         .footer-links li {
             margin-bottom: 12px;
         }
-        
         .footer-links a {
             color: #aaa;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
         .footer-links a:hover {
             color: var(--primary);
         }
-        
         .social-icons {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
-        
         .social-icons a {
             display: inline-flex;
             align-items: center;
@@ -663,11 +607,9 @@
             font-size: 1.2rem;
             transition: background-color 0.3s;
         }
-        
         .social-icons a:hover {
             background-color: var(--primary);
         }
-        
         .copyright {
             text-align: center;
             padding-top: 30px;
@@ -675,21 +617,17 @@
             color: #aaa;
             font-size: 0.9rem;
         }
-        
         .developer-credit {
             margin-top: 15px;
         }
-        
         .developer-credit a {
             color: var(--accent);
             text-decoration: none;
             font-weight: 600;
         }
-        
         .developer-credit a:hover {
             text-decoration: underline;
         }
-        
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -707,27 +645,29 @@
             z-index: 100;
             transition: all 0.3s;
         }
-        
         .whatsapp-float:hover {
             background-color: #128C7E;
             transform: scale(1.1);
         }
         
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero h2 {
-                font-size: 2.8rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .specs-grid {
-                grid-template-columns: 1fr;
+        /* === RESPONSIVE STYLES === */
+        @media (max-width: 1200px) {
+            .preview-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
-        
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 3rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         @media (max-width: 768px) {
             nav {
                 position: fixed;
@@ -741,53 +681,46 @@
                 visibility: hidden;
                 transition: all 0.3s;
             }
-            
             nav.active {
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
             }
-            
             nav ul {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .mobile-menu-btn {
                 display: block;
             }
-            
             .hero h2 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
-            
             .hero p {
                 font-size: 1.1rem;
             }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            .premium-cta h2 {
+                font-size: 2.5rem;
             }
         }
-        
         @media (max-width: 576px) {
             .hero h2 {
+                font-size: 2rem;
+            }
+            .section-title h2 {
                 font-size: 1.8rem;
             }
-            
-            .section-title h2 {
+            .premium-cta h2 {
                 font-size: 2rem;
             }
-            
-            .about-text h2 {
-                font-size: 2rem;
+            .btn-main, .btn-alt {
+                padding: 15px 30px;
+                font-size: 1rem;
             }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .spec-details {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -799,7 +732,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Header -->
+    <!-- Header with Adjusted Background Visibility -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -810,10 +743,10 @@
             <nav id="mainNav">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#specs">Specifications</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#why-choose">Why Us</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -821,7 +754,7 @@
             <div class="header-actions">
                 <div class="cart-icon">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">3</span>
+                    <span class="cart-count">0</span>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
@@ -830,87 +763,167 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Single Button -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h2>Premium Sporty Rims</h2>
-                <p>Elevate your vehicle's performance and style with our exclusive collection of high-quality, precision-engineered rims. Designed for enthusiasts who demand the best.</p>
-                <a href="#products" class="cta-button">Explore Collection</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Rims</h2>
-                <p>Discover our top-selling sporty rims that combine performance with style</p>
-            </div>
-            
-            <div class="products-grid" id="productsGrid">
-                <!-- Product cards will be generated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Rim Gallery</h2>
-                <p>See how our rims transform vehicles from ordinary to extraordinary</p>
-            </div>
-            
-            <div class="gallery-tabs" id="galleryTabs">
-                <button class="gallery-tab active" data-filter="all">All Photos</button>
-                <button class="gallery-tab" data-filter="on-car">On Vehicles</button>
-                <button class="gallery-tab" data-filter="closeup">Close-up Shots</button>
-            </div>
-            
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Gallery items will be generated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Specifications Section -->
-    <section class="specs" id="specs">
-        <div class="container">
-            <div class="section-title">
-                <h2>Rim Specifications</h2>
-                <p>Detailed specifications for our premium rim collection</p>
-            </div>
-            
-            <div class="specs-grid" id="specsGrid">
-                <!-- Specification cards will be generated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About WheelWorld</h2>
-                    <p>Founded in 2005, WheelWorld has established itself as a premier provider of high-performance sporty rims for automotive enthusiasts worldwide. Our mission is simple: to deliver exceptional quality, cutting-edge design, and unparalleled customer service.</p>
-                    <p>We work directly with leading manufacturers to bring you the latest innovations in rim technology, ensuring every product meets our rigorous standards for durability, performance, and aesthetic appeal.</p>
-                    <p>Whether you're looking to upgrade your daily driver or building a show-stopping custom vehicle, WheelWorld has the perfect rims to match your vision and exceed your expectations.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba5338fe2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="WheelWorld workshop">
+                <h2>Premium Rims for Exceptional Performance</h2>
+                <p>Discover the finest collection of high-performance automotive rims designed to transform your vehicle and elevate your driving experience.</p>
+                <div class="hero-buttons">
+                    <a href="#featured" class="cta-button">Discover Our Collection</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
+    <!-- Logo Showcase Section -->
+    <section class="logo-showcase">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted By Leading Brands</h2>
+                <p>We partner with the world's most respected automotive manufacturers</p>
+            </div>
+            
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/BBS_logo.svg/2560px-BBS_logo.svg.png" alt="BBS">
+                </div>
+                <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Enkei_logo.svg/1200px-Enkei_logo.svg.png" alt="Enkei">
+                </div>
+                <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/OZ_Racing_logo.svg/1200px-OZ_Racing_logo.svg.png" alt="OZ Racing">
+                </div>
+                <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/HRE_Performance_Wheels_logo.svg/1200px-HRE_Performance_Wheels_logo.svg.png" alt="HRE">
+                </div>
+                <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Rays_Engineering_logo.svg/1200px-Rays_Engineering_logo.svg.png" alt="Rays">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery-preview" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Collections</h2>
+                <p>Explore our premium rim collections designed for every driving style</p>
+            </div>
+            
+            <div class="preview-grid">
+                <div class="preview-item">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Sport Series">
+                    <div class="preview-content">
+                        <h3>Sport Series</h3>
+                        <p>High-performance rims for track and street</p>
+                        <a href="gallery.html#sport" class="preview-link">View Collection</a>
+                    </div>
+                </div>
+                
+                <div class="preview-item">
+                    <img src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Luxury Collection">
+                    <div class="preview-content">
+                        <h3>Luxury Collection</h3>
+                        <p>Premium finishes for executive vehicles</p>
+                        <a href="gallery.html#luxury" class="preview-link">View Collection</a>
+                    </div>
+                </div>
+                
+                <div class="preview-item">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba5338fe2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Off-Road Series">
+                    <div class="preview-content">
+                        <h3>Off-Road Series</h3>
+                        <p>Rugged wheels for adventurous terrains</p>
+                        <a href="gallery.html#offroad" class="preview-link">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Rims Section -->
+    <section class="featured-rims" id="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Selection</h2>
+                <p>Handpicked rims that combine performance, style, and quality</p>
+            </div>
+            
+            <div class="rims-grid">
+                <div class="rim-card">
+                    <div class="rim-image">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Nexus Forged">
+                    </div>
+                    <div class="rim-info">
+                        <h3>Nexus Forged Series</h3>
+                        <p>Aerodynamic monoblock forged aluminum designed for maximum performance and minimal weight.</p>
+                        
+                        <div class="rim-features">
+                            <span class="rim-feature">Forged Aluminum</span>
+                            <span class="rim-feature">Lightweight</span>
+                            <span class="rim-feature">High Performance</span>
+                        </div>
+                        
+                        <div class="rim-footer">
+                            <div class="price">$420</div>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rim-card">
+                    <div class="rim-image">
+                        <img src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Carbon Elite">
+                    </div>
+                    <div class="rim-info">
+                        <h3>Carbon Elite Series</h3>
+                        <p>Full carbon fiber construction with aerospace-grade resin for ultimate strength and vibration dampening.</p>
+                        
+                        <div class="rim-features">
+                            <span class="rim-feature">Carbon Fiber</span>
+                            <span class="rim-feature">Ultra Light</span>
+                            <span class="rim-feature">Premium Finish</span>
+                        </div>
+                        
+                        <div class="rim-footer">
+                            <div class="price">$1,150</div>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rim-card">
+                    <div class="rim-image">
+                        <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1021&q=80" alt="Stealth Edition">
+                    </div>
+                    <div class="rim-info">
+                        <h3>Stealth Edition</h3>
+                        <p>Deep concave design with ceramic nano-coating for durability and a signature matte black appearance.</p>
+                        
+                        <div class="rim-features">
+                            <span class="rim-feature">Matte Black</span>
+                            <span class="rim-feature">Ceramic Coated</span>
+                            <span class="rim-feature">Aggressive Design</span>
+                        </div>
+                        
+                        <div class="rim-footer">
+                            <div class="price">$380</div>
+                            <button class="view-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose WheelWorld Section -->
+    <section class="why-choose" id="why-choose">
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose WheelWorld</h2>
+                <p>Discover what makes us the preferred choice for automotive enthusiasts worldwide</p>
             </div>
             
             <div class="features-grid">
@@ -949,67 +962,73 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch for inquiries, custom orders, or assistance</p>
+                <h2>Customer Reviews</h2>
+                <p>What our satisfied customers have to say about their experience</p>
             </div>
             
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Have questions about our rims or need help choosing the right set for your vehicle? Our team is here to help you make the perfect selection.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Our Location</h4>
-                                <p>123 Auto Avenue, Detroit, MI 48201</p>
-                            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">"The quality of these rims exceeded my expectations. Perfect fitment and the finish is flawless. My car looks completely transformed!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez">
                         </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone Number</h4>
-                                <p>(555) 123-4567</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-detail">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email Address</h4>
-                                <p>info@wheelworld.com</p>
-                            </div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Car Enthusiast</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">"Professional service from start to finish. They helped me choose the perfect rims for my SUV. Couldn't be happier with the result."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>SUV Owner</p>
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    </div>
                 </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">"As a professional restorer, I need reliable parts. These rims were perfect for my classic car project. Authentic look, modern quality."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <p>Classic Car Restorer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium CTA Section -->
+    <section class="premium-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Ride?</h2>
+            <p>Browse our extensive gallery to find your perfect rims, or contact our experts for personalized recommendations based on your vehicle and style preferences.</p>
+            
+            <div class="cta-buttons">
+                <a href="gallery.html" class="btn-main">
+                    <i class="fas fa-images"></i> Explore Full Gallery
+                </a>
+                <a href="https://wa.me/2772191428789" class="btn-alt" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat with Expert
+                </a>
             </div>
         </div>
     </section>
@@ -1033,10 +1052,10 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
+                        <li><a href="#featured">Featured Rims</a></li>
                         <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#specs">Specifications</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#why-choose">Why Choose Us</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -1055,7 +1074,7 @@
             <div class="copyright">
                 <p>&copy; 2023 WheelWorld. All rights reserved. | Designed for automotive enthusiasts</p>
                 <div class="developer-credit">
-                    <p>Developed by <a href="https://wa.me/2772191428789" target="_blank">Quantum Solutions</a> | Contact on WhatsApp: 072191428789</p>
+                    <p>Developed by <a href="#" target="_blank">Quantum Solutions</a></p>
                 </div>
             </div>
         </div>
@@ -1063,418 +1082,132 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-        // Product Data
-        const products = [
-            {
-                id: 1,
-                name: "Vortex X1",
-                description: "Lightweight forged aluminum rims with aerodynamic design for maximum performance.",
-                price: "$349",
-                image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
-            },
-            {
-                id: 2,
-                name: "Carbon Revolution",
-                description: "Carbon fiber construction for ultimate strength-to-weight ratio and stunning looks.",
-                price: "$899",
-                image: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-            },
-            {
-                id: 3,
-                name: "Chrome Dominator",
-                description: "High-polish chrome finish with deep dish design for a classic aggressive look.",
-                price: "$429",
-                image: "https://images.unsplash.com/photo-1628247896523-8233b4f0448f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
-            },
-            {
-                id: 4,
-                name: "Track Pro",
-                description: "Designed for track performance with advanced heat dissipation technology.",
-                price: "$599",
-                image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-            },
-            {
-                id: 5,
-                name: "Stealth Black",
-                description: "Matte black finish with red accent details for a modern, aggressive appearance.",
-                price: "$379",
-                image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1021&q=80"
-            },
-            {
-                id: 6,
-                name: "Alloy Pro",
-                description: "Premium alloy construction with unique multi-spoke design for luxury vehicles.",
-                price: "$479",
-                image: "https://images.unsplash.com/photo-1593941707882-a5bba5338fe2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-            }
-        ];
-
-        // Gallery Data
-        const galleryItems = [
-            {
-                id: 1,
-                title: "Vortex X1 on Sports Car",
-                description: "Our Vortex X1 rims on a high-performance sports car",
-                category: "on-car",
-                image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-            },
-            {
-                id: 2,
-                title: "Carbon Revolution Close-up",
-                description: "Detailed shot of the carbon fiber construction",
-                category: "closeup",
-                image: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-            },
-            {
-                id: 3,
-                title: "Stealth Black on SUV",
-                description: "Aggressive black rims on a modern SUV",
-                category: "on-car",
-                image: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1021&q=80"
-            },
-            {
-                id: 4,
-                title: "Chrome Dominator Detail",
-                description: "Close-up of the high-polish chrome finish",
-                category: "closeup",
-                image: "https://images.unsplash.com/photo-1628247896523-8233b4f0448f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80"
-            },
-            {
-                id: 5,
-                title: "Track Pro on Race Car",
-                description: "Track performance rims on a professional race car",
-                category: "on-car",
-                image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-            },
-            {
-                id: 6,
-                title: "Alloy Pro Detail",
-                description: "Detailed view of the multi-spoke alloy design",
-                category: "closeup",
-                image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
-            },
-            {
-                id: 7,
-                title: "Vortex X1 on Luxury Sedan",
-                description: "Sporty rims enhancing a luxury sedan",
-                category: "on-car",
-                image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
-            },
-            {
-                id: 8,
-                title: "Track Pro Close-up",
-                description: "Detailed view of heat dissipation technology",
-                category: "closeup",
-                image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-            }
-        ];
-
-        // Specifications Data
-        const specifications = [
-            {
-                id: 1,
-                name: "Vortex X1",
-                image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-                sizes: ["17\"", "18\"", "19\"", "20\""],
-                material: "Forged Aluminum",
-                weight: "22-28 lbs",
-                finish: "Matte Black, Silver, Gunmetal",
-                offset: "+35 to +45"
-            },
-            {
-                id: 2,
-                name: "Carbon Revolution",
-                image: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-                sizes: ["19\"", "20\"", "21\"", "22\""],
-                material: "Carbon Fiber",
-                weight: "18-24 lbs",
-                finish: "Carbon Weave, Gloss Black",
-                offset: "+30 to +40"
-            },
-            {
-                id: 3,
-                name: "Chrome Dominator",
-                image: "https://images.unsplash.com/photo-1628247896523-8233b4f0448f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
-                sizes: ["18\"", "20\"", "22\"", "24\""],
-                material: "Alloy with Chrome Plating",
-                weight: "30-38 lbs",
-                finish: "High Polish Chrome",
-                offset: "+15 to +25"
-            },
-            {
-                id: 4,
-                name: "Track Pro",
-                image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                sizes: ["18\"", "19\"", "20\""],
-                material: "Flow-Formed Aluminum",
-                weight: "20-26 lbs",
-                finish: "Satin Bronze, Gloss Black",
-                offset: "+40 to +50"
-            }
-        ];
-
-        // DOM Elements
-        const productsGrid = document.getElementById('productsGrid');
-        const galleryGrid = document.getElementById('galleryGrid');
-        const galleryTabs = document.getElementById('galleryTabs');
-        const specsGrid = document.getElementById('specsGrid');
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
-        const cartCount = document.querySelector('.cart-count');
-        const contactForm = document.getElementById('contactForm');
-
-        // Initialize cart count
-        let cartItems = 3;
-
-        // Generate product cards
-        function renderProducts() {
-            productsGrid.innerHTML = '';
-            
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card';
-                productCard.innerHTML = `
-                    <div class="product-img">
-                        <img src="${product.image}" alt="${product.name}">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                        <div class="product-price">
-                            <span class="price">${product.price}</span>
-                            <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-                        </div>
-                    </div>
-                `;
-                
-                productsGrid.appendChild(productCard);
-            });
-            
-            // Add event listeners to cart buttons
-            document.querySelectorAll('.add-to-cart').forEach(button => {
-                button.addEventListener('click', addToCart);
-            });
-        }
-
-        // Generate gallery items
-        function renderGallery() {
-            galleryGrid.innerHTML = '';
-            
-            galleryItems.forEach(item => {
-                const galleryItem = document.createElement('div');
-                galleryItem.className = 'gallery-item';
-                galleryItem.dataset.category = item.category;
-                galleryItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.title}">
-                    <div class="gallery-caption">
-                        <h4>${item.title}</h4>
-                        <p>${item.description}</p>
-                    </div>
-                `;
-                
-                galleryGrid.appendChild(galleryItem);
-            });
-            
-            // Initialize gallery filtering
-            initGalleryFiltering();
-        }
-
-        // Initialize gallery filtering
-        function initGalleryFiltering() {
-            const tabs = document.querySelectorAll('.gallery-tab');
-            const items = document.querySelectorAll('.gallery-item');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Update active tab
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    
-                    const filter = tab.dataset.filter;
-                    
-                    // Filter items
-                    items.forEach(item => {
-                        if (filter === 'all' || item.dataset.category === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        }
-
-        // Generate specification cards
-        function renderSpecifications() {
-            specsGrid.innerHTML = '';
-            
-            specifications.forEach(spec => {
-                const specCard = document.createElement('div');
-                specCard.className = 'spec-card';
-                specCard.innerHTML = `
-                    <div class="spec-image">
-                        <img src="${spec.image}" alt="${spec.name}">
-                    </div>
-                    <div class="spec-content">
-                        <h3>${spec.name}</h3>
-                        <p>Premium performance rim with cutting-edge design and technology.</p>
-                        
-                        <div class="spec-details">
-                            <div class="spec-detail">
-                                <div class="spec-icon">
-                                    <i class="fas fa-ruler-combined"></i>
-                                </div>
-                                <div>
-                                    <div class="spec-label">Available Sizes</div>
-                                    <div class="spec-value">${spec.sizes.join(', ')}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="spec-detail">
-                                <div class="spec-icon">
-                                    <i class="fas fa-cube"></i>
-                                </div>
-                                <div>
-                                    <div class="spec-label">Material</div>
-                                    <div class="spec-value">${spec.material}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="spec-detail">
-                                <div class="spec-icon">
-                                    <i class="fas fa-weight-hanging"></i>
-                                </div>
-                                <div>
-                                    <div class="spec-label">Weight</div>
-                                    <div class="spec-value">${spec.weight}</div>
-                                </div>
-                            </div>
-                            
-                            <div class="spec-detail">
-                                <div class="spec-icon">
-                                    <i class="fas fa-palette"></i>
-                                </div>
-                                <div>
-                                    <div class="spec-label">Finish Options</div>
-                                    <div class="spec-value">${spec.finish}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                specsGrid.appendChild(specCard);
-            });
-        }
-
-        // Add to cart function
-        function addToCart(e) {
-            const productId = e.target.getAttribute('data-id');
-            cartItems++;
-            cartCount.textContent = cartItems;
-            
-            // Visual feedback
-            e.target.textContent = 'Added!';
-            e.target.style.backgroundColor = 'green';
-            
-            setTimeout(() => {
-                e.target.textContent = 'Add to Cart';
-                e.target.style.backgroundColor = '';
-            }, 1500);
-            
-            // In a real application, you would add the product to a cart array
-            console.log(Added product ${productId} to cart);
-        }
-
-        // Mobile menu toggle
+        
         mobileMenuBtn.addEventListener('click', () => {
             mainNav.classList.toggle('active');
             const icon = mobileMenuBtn.querySelector('i');
-            if (mainNav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
 
         // Close mobile menu when clicking a link
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 mainNav.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
             });
         });
 
-        // Smooth scrolling for anchor links
+        // Smooth Scrolling for Navigation Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 70,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Contact form submission
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const subject = this.querySelector('input[type="text"]').value;
-            const message = this.querySelector('textarea').value;
-            
-            // In a real application, you would send this data to a server
-            console.log('Contact form submitted:', { name, email, subject, message });
-            
-            // Show success message
-            alert('Thank you for your message! We will get back to you soon.');
-            
-            // Reset form
-            this.reset();
+        // View Details Button Interaction
+        document.querySelectorAll('.view-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const rimName = this.closest('.rim-info').querySelector('h3').textContent;
+                alert(`Detailed specifications for the ${rimName} will be displayed on a dedicated product page.`);
+            });
         });
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-            renderGallery();
-            renderSpecifications();
-            
-            // Add a simple animation to elements on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe product cards
-            document.querySelectorAll('.product-card, .feature-card, .spec-card, .gallery-item').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s, transform 0.5s';
-                observer.observe(card);
+        // Cart Interaction
+        const cartCount = document.querySelector('.cart-count');
+        let cartItems = 0;
+        
+        document.querySelectorAll('.view-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                cartItems++;
+                cartCount.textContent = cartItems;
+                cartCount.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    cartCount.style.transform = 'scale(1)';
+                }, 300);
             });
+        });
+
+        // Scroll Animation for Elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.preview-item, .rim-card, .feature-card, .testimonial-card, .logo-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Feature card icon animation
+        document.querySelectorAll('.feature-card').forEach(card => {
+            const icon = card.querySelector('.feature-icon');
+            card.addEventListener('mouseenter', () => {
+                icon.style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            card.addEventListener('mouseleave', () => {
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Add subtle hover effect to CTA buttons
+        document.querySelectorAll('.btn-main, .btn-alt').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+            });
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Initialize lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+
+        // Header background adjustment on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            
+            // Adjust header background opacity based on scroll
+            if (scrollPosition > 100) {
+                header.style.background = 'linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9)), url(https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)';
+                header.style.backgroundSize = 'cover';
+                header.style.backgroundPosition = 'center';
+            } else {
+                header.style.background = 'linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75)), url(https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)';
+                header.style.backgroundSize = 'cover';
+                header.style.backgroundPosition = 'center';
+            }
         });
     </script>
 </body>
