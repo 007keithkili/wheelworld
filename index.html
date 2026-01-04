@@ -724,6 +724,22 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Update for clickable logo in header */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:hover {
+    color: inherit; /* Keep the same color on hover */
+}
+
+.logo a:hover i {
+    color: var(--primary); /* Only change the icon color on hover */
+}
     </style>
 </head>
 <body>
@@ -733,36 +749,38 @@
     </a>
 
     <!-- Header with Adjusted Background Visibility -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
+   <!-- Header with Clickable Logo -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="blob:https://www.pinterest.com/15424324-b034-479e-baae-81400a12d702" class="logo-link">
                 <i class="fas fa-tire"></i>
                 <h1>Wheel<span>World</span></h1>
-            </div>
-            
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#featured">Featured</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#why-choose">Why Us</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header-actions">
-                <div class="cart-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+            </a>
         </div>
-    </header>
-
+        
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#why-choose">Why Us</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
     <!-- Hero Section with Single Button -->
     <section class="hero" id="home">
         <div class="container">
@@ -786,19 +804,19 @@
             
             <div class="logo-grid">
                 <div class="logo-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/BBS_logo.svg/2560px-BBS_logo.svg.png" alt="BBS">
+                    <img src="https://i.pinimg.com/736x/41/3e/84/413e8428eca69a4bca9f9ca2035725e0.jpg" alt="BBS">
                 </div>
                 <div class="logo-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Enkei_logo.svg/1200px-Enkei_logo.svg.png" alt="Enkei">
+                    <img src="https://i.pinimg.com/1200x/36/08/4b/36084b7ca61623e7732158b1b7cbe9d5.jpg" alt="Enkei">
                 </div>
                 <div class="logo-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/OZ_Racing_logo.svg/1200px-OZ_Racing_logo.svg.png" alt="OZ Racing">
+                    <img src="https://i.pinimg.com/736x/50/02/2c/50022c08db15fd180c28d64ca1316a21.jpg" alt="OZ Racing">
                 </div>
                 <div class="logo-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/HRE_Performance_Wheels_logo.svg/1200px-HRE_Performance_Wheels_logo.svg.png" alt="HRE">
+                    <img src="https://i.pinimg.com/1200x/03/84/97/03849768ebb3857cc7551755c7f19ed6.jpg" alt="HRE">
                 </div>
                 <div class="logo-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Rays_Engineering_logo.svg/1200px-Rays_Engineering_logo.svg.png" alt="Rays">
+                    <img src="https://i.pinimg.com/736x/00/b7/da/00b7dad3598f756eff41c85fe019f580.jpg" alt="Rays">
                 </div>
             </div>
         </div>
@@ -814,7 +832,7 @@
             
             <div class="preview-grid">
                 <div class="preview-item">
-                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Sport Series">
+                    <img src="https://i.pinimg.com/1200x/2e/81/34/2e8134383c82b0a965c0f85a45b95e91.jpg" alt="Sport Series">
                     <div class="preview-content">
                         <h3>Sport Series</h3>
                         <p>High-performance rims for track and street</p>
@@ -823,7 +841,7 @@
                 </div>
                 
                 <div class="preview-item">
-                    <img src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Luxury Collection">
+                    <img src="https://i.pinimg.com/736x/ad/80/69/ad80698245f04fb78d97d66c2cb8940a.jpg" alt="Luxury Collection">
                     <div class="preview-content">
                         <h3>Luxury Collection</h3>
                         <p>Premium finishes for executive vehicles</p>
@@ -832,7 +850,7 @@
                 </div>
                 
                 <div class="preview-item">
-                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba5338fe2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Off-Road Series">
+                    <img src="https://i.pinimg.com/1200x/17/61/04/176104f7525203275e8f1acdd7b5bef8.jpg alt="Off-Road Series">
                     <div class="preview-content">
                         <h3>Off-Road Series</h3>
                         <p>Rugged wheels for adventurous terrains</p>
@@ -854,7 +872,7 @@
             <div class="rims-grid">
                 <div class="rim-card">
                     <div class="rim-image">
-                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" alt="Nexus Forged">
+                        <img src="https://i.pinimg.com/1200x/b7/8c/3f/b78c3f26210085d35acfa78321458817.jpg" alt="Nexus Forged">
                     </div>
                     <div class="rim-info">
                         <h3>Nexus Forged Series</h3>
@@ -867,7 +885,7 @@
                         </div>
                         
                         <div class="rim-footer">
-                            <div class="price">$420</div>
+                            <div class="price">$</div>
                             <button class="view-btn">View Details</button>
                         </div>
                     </div>
@@ -888,7 +906,7 @@
                         </div>
                         
                         <div class="rim-footer">
-                            <div class="price">$1,150</div>
+                            <div class="price"></div>
                             <button class="view-btn">View Details</button>
                         </div>
                     </div>
@@ -976,10 +994,10 @@
                     <p class="testimonial-text">"The quality of these rims exceeded my expectations. Perfect fitment and the finish is flawless. My car looks completely transformed!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="keith kili">
                         </div>
                         <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
+                            <h4>Keith kili</h4>
                             <p>Car Enthusiast</p>
                         </div>
                     </div>
@@ -993,7 +1011,7 @@
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
                         </div>
                         <div class="author-info">
-                            <h4>Sarah Johnson</h4>
+                            <h4>kevin auko</h4>
                             <p>SUV Owner</p>
                         </div>
                     </div>
@@ -1007,7 +1025,7 @@
                             <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen">
                         </div>
                         <div class="author-info">
-                            <h4>David Chen</h4>
+                            <h4>David ochieng</h4>
                             <p>Classic Car Restorer</p>
                         </div>
                     </div>
@@ -1053,7 +1071,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#featured">Featured Rims</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="#why-choose">Why Choose Us</a></li>
                         <li><a href="#testimonials">Reviews</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -1063,8 +1081,8 @@
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Auto Avenue, Detroit, MI</li>
-                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi</li>
+                        <li><i class="fas fa-phone"></i> 07,,</li>
                         <li><i class="fas fa-envelope"></i> info@wheelworld.com</li>
                         <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm, Sat: 10am-4pm</li>
                     </ul>
